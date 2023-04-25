@@ -1,1 +1,1 @@
-simple_shell solutions
+simple_shell solution
