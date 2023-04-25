@@ -42,6 +42,7 @@ char **split_string(char *input, const char *delim, int *num_toks)
 	char *tok;
 	char *input_copy = strdup(input);
 	char **toks = NULL;
+	int i;
 
 	tok = strtok(input, delim);
 
@@ -56,7 +57,7 @@ char **split_string(char *input, const char *delim, int *num_toks)
 
 	tok = strtok(input_copy, delim);
 
-	for (int i = 0; tok != NULL; i++)
+	for (i = 0; tok != NULL; i++)
 	{
 	toks[i] = strdup(tok);
 	tok = strtok(NULL, delim);
@@ -115,11 +116,12 @@ void execute_command(char **args, char **envp)
 
 int main(int argc, char **envp)
 {
-	(void)argc;
+
 	char *prompt;
 	char *input;
 	int num_args = 0;
 	char **toks;
+	(void)argc;
 
 	while (1)
 	{
