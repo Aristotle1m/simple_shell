@@ -22,7 +22,7 @@ char *read_textfile(char *filename)
 	of = open(filename, O_RDONLY);
 	if (of == -1)
 	{
-		do_mem(0, buff);
+		do_mem(0, buffer);
 		do_exit(2, _strcat("Can't open ", filename), 127);
 	}
 

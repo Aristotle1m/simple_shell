@@ -54,7 +54,7 @@ int sizeof_command(char **tokens)
 
 	if (!tokens)
 		return (0);
-	for (x = 0; tokens[x]; i++)
+	for (x = 0; tokens[x]; x++)
 	{
 		if (tokens[x][0] == '&' && tokens[x][1] == '&')
 			break;

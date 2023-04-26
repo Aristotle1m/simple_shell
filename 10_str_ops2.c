@@ -19,7 +19,7 @@ char *_reverse(char *str, int n)
 	{
 		temp = *end;
 		*end = *start;
-		*begin = temp;
+		*start = temp;
 	}
 	return (str);
 }
